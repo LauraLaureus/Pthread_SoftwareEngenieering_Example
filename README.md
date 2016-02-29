@@ -4,7 +4,9 @@ Software Engieneering example for Pthread Concurrency Library
 This is an example of modularization using pthreads.
 
 Main Goals:
+
 Share mutex and counter variable.
+
 Keep every module apart from others.
 
 MainHeader contains pthread library which is needed for every module, the definition of mutex and counter variable.
