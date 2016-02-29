@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "MainHeader.h"
+
+pthread_t mod1,mod2;
+//pthread_attr_t attr;
+int count = 0;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+    pthread_create(&mod1,NULL, module1_init, NULL);
+    pthread_detach(mod1);
+    
+    pthread_create(&mod2, NULL, module2_init, NULL);
+    pthread_detach(mod2);
+
+    pthread_exit(NULL);
+    
 }

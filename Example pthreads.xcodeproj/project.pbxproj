@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		274790DA1C845A6E00554C58 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 274790D91C845A6E00554C58 /* main.cpp */; };
+		274790E51C845B6D00554C58 /* Module1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 274790E31C845B6D00554C58 /* Module1.cpp */; };
+		274790E81C845B7A00554C58 /* Module2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 274790E61C845B7A00554C58 /* Module2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		274790D61C845A6E00554C58 /* Example pthreads */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example pthreads"; sourceTree = BUILT_PRODUCTS_DIR; };
 		274790D91C845A6E00554C58 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		274790E21C845AE200554C58 /* MainHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHeader.h; sourceTree = "<group>"; };
+		274790E31C845B6D00554C58 /* Module1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Module1.cpp; sourceTree = "<group>"; };
+		274790E41C845B6D00554C58 /* Module1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Module1.hpp; sourceTree = "<group>"; };
+		274790E61C845B7A00554C58 /* Module2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Module2.cpp; sourceTree = "<group>"; };
+		274790E71C845B7A00554C58 /* Module2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Module2.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				274790D91C845A6E00554C58 /* main.cpp */,
+				274790E21C845AE200554C58 /* MainHeader.h */,
+				274790E31C845B6D00554C58 /* Module1.cpp */,
+				274790E41C845B6D00554C58 /* Module1.hpp */,
+				274790E61C845B7A00554C58 /* Module2.cpp */,
+				274790E71C845B7A00554C58 /* Module2.hpp */,
 			);
 			path = "Example pthreads";
 			sourceTree = "<group>";
@@ -119,6 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				274790DA1C845A6E00554C58 /* main.cpp in Sources */,
+				274790E81C845B7A00554C58 /* Module2.cpp in Sources */,
+				274790E51C845B6D00554C58 /* Module1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +221,10 @@
 		274790DE1C845A6E00554C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system/introspection",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +232,10 @@
 		274790DF1C845A6E00554C58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system/introspection",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
